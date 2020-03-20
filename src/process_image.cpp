@@ -48,13 +48,13 @@ void process_image_callback(const sensor_msgs::Image img)
         drive_robot(0,0);
 
     else if(left_num > center_num && left_num > right_num)
-        drive_robot(3,0.5);
+        drive_robot(1,0.2);
 
     else if(right_num > center_num && right_num > left_num)
-        drive_robot(3,-0.5);
+        drive_robot(1,-0.2);
 
     else 
-        drive_robot(3,0);
+        drive_robot(1,0);
 
     // TODO: Loop through each pixel in the image and check if there's a bright white one
     // Then, identify if this pixel falls in the left, mid, or right side of the image
